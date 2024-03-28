@@ -32,3 +32,9 @@ sed -i '/linkMELA =/c\linkMELA = Yes' makefile
 sed -i '/MELALibDir =/c\  MELALibDir = $(MELADataDir)/$(MELA_ARCH)' makefile
 make
 ```
+
+Command lines needed for the tutorial 
+```
+./JHUGen Process=68 deltaRcut=0.3 pTjetcut=10 mJJcut=70 m4l_min=70 m4l_max=13000 VegasNc0=10000 ReweightInterf=0 ghz1=1,0 VBFoffsh_run=1 DataFile=Grids_Output/Out
+./JHUGen Process=68 deltaRcut=0.3 pTjetcut=10 mJJcut=70 m4l_min=70 m4l_max=13000 VegasNc0=10000 ReweightInterf=0 ghz1=1,0 VBFoffsh_run=1 VegasNc2=10000 ReadCSmax DataFile=Grids/Out
+```
