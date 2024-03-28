@@ -8,6 +8,9 @@ cd JHUGenTutorial
 cmsrel CMSSW_13_3_1
 cd CMSSW_13_3_1/src
 cmsenv
+cd ../..
+wget https://spin.pha.jhu.edu/Generator/JHUGenerator.v7.5.5.tar.gz
+tar -xf JHUGenerator.v7.5.5.tar.gz
 ```
 
 ## Compilation of MCFM-JHUGen
