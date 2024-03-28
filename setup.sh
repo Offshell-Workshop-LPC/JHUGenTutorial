@@ -29,6 +29,7 @@ then
     # edit the makefile to link lhapdf
     sed -i '/LHAPDFLIB   =/c\LHAPDFLIB   =/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/lhapdf/6.4.0-52852f9a177b8e8b5b72e2ae6b1327b6/lib' makefile
     sed -i '/PDFROUTINES =/c\PDFROUTINES = LHAPDF' makefile
+    make
 else
     echo "Skipping automatic compilation of mcfm!" 
 fi
@@ -49,6 +50,7 @@ then
     eval `./setup.sh env`
     cd ../JHUGenerator
     sed -i '/linkMELA =/c\linkMELA = Yes' makefile
+    sed -i '/MELALibDir =/c\  MELALibDir = $(MELADataDir)/$(MELA_ARCH)' makefile
     make
 else
     echo "Skipping automatic compilation of JHUGen!" 
